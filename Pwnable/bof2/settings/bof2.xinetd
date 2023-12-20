@@ -6,8 +6,8 @@ service bof1
 	protocol = tcp
 	user = user
 	wait = no
-	server = /home/bof1/run.sh
+	server = /home/bof2/run.sh
 	type = UNLISTED
-	port = 3346
+	port = 3456
 }
 

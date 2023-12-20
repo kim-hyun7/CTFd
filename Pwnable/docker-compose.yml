@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  bof1:
+    build:
+      context: ./bof1      
+    ports:
+      - "86:3346"
+    
+    restart: always
+
+  bof2:
+    build:
+      context: ./bof2
+    ports:
+      - "85:3456"
+    restart: always
+  bof3:
+    build:
+      context: ./bof3
+    ports:
+      - "84:3555"
+    restart: always
