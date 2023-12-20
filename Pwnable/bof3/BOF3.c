@@ -3,10 +3,22 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <signal.h>
+
+void alarm_handler() {
+    puts("TIME OUT");
+    exit(-1);
+}
+
+void init() {
+    setvbuf(stdin, NULL, _IONBF, 0);
+    setvbuf(stdout, NULL, _IONBF, 0);
+    signal(SIGALRM, alarm_handler);
+    alarm(10);
+}
 
 int main(){
-    
-    
+       
     char userid[11];
     char userpassword[11];
     char inputAdmin[14];
@@ -15,6 +27,8 @@ int main(){
     char AdminPassword[5] = "1234";
 
     char registered;
+    
+    init();
     printf("you registered? [y/n] : ");
     scanf("%c", &registered);
     getchar();

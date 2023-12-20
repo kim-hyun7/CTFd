@@ -20,7 +20,7 @@ RUN echo "#!/bin/bash" > /home/bof3/run.sh && \
 
 RUN chown -R 750 /home/bof3
 
-ADD ./settings/bof2.xinetd /etc/xinetd.d/bof3
+ADD ./settings/bof3.xinetd /etc/xinetd.d/bof3
 
 
 
